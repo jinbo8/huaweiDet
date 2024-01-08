@@ -1,0 +1,15 @@
+{
+
+  "camera1": {
+    "width_start": 100,
+    "width_end": 3860,
+    "height_start": 110,
+    "height_end": 2560
+  },
+    "camera2": {
+    "width_start": 300,
+    "width_end": 2000,
+    "height_start": 110,
+    "height_end": 500
+  }
+}

@@ -1,0 +1,20 @@
+# version: 
+2023081000.onnx
+
+# 模型输入/输出
+input: (48, 168, 3), 图像色彩通道：BGR
+output:list('预测车牌号'，'车牌置信度')
+
+# 输入图片归一化：
+
+def image_processing(img, device):
+
+    img = cv2.resize(img, (168, 48))
+    mean_value, std_value = (0.588, 0.193)
+    img = img.astype(np.float32)
+    img = (img / 255. - mean_value) / std_value
+    img = img.transpose([2, 0, 1])
+
+    return img
+
+
